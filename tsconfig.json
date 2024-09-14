@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "target": "ESNext", // Modern JS output
+        "module": "ESNext", // Use ES Module syntax (import/export)
+        "rootDir": "src", // Source directory
+        "outDir": "dist", // Output directory for compiled files
+        "strict": true, // Enable all strict type-checking options
+        "esModuleInterop": true, // Compatibility with CommonJS
+        "forceConsistentCasingInFileNames": true, // Ensure consistent file naming
+        "skipLibCheck": true, // Skip checking of library declaration files
+        "moduleResolution": "node" // Module resolution strategy
+    },
+    "include": ["src/**/*"], // Include all TypeScript files in src
+    "exclude": ["node_modules", "dist"] // Exclude node_modules and output directories
+}

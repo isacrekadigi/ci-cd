@@ -40,7 +40,8 @@ jobs:
       - name: Build Project
         run: npm run build
   deploy:
-    needs: build
+    if: github.ref == 'refs/heads/main'  # Only run if on the main branch
+    needs: build                         # Run after the build job completes successfully
     runs-on: ubuntu-latest
 
     steps:
@@ -53,8 +54,8 @@ jobs:
           key: ${{ secrets.VPS_PRIVATE_KEY }}
           port: 22  # If you're using a custom SSH port, change this to ${{ secrets.VPS_PORT }}
           script: |
-            cd /var/www/your-app-directory
+            cd /var/www/test-ci-cd
             git pull origin main
             npm install
             npm run build
-            pm2 restart your-app-name
+            pm2 restart test-ci-cd:4000

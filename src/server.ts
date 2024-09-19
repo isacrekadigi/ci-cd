@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/", (req: Request, res: Response) => {
   return res.status(200).json({
     code: 200,
-    status: "success",
+    status: "has deployed successfully",
     message: "welcome to betty API",
   });
 });

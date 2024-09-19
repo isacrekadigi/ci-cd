@@ -1,7 +1,22 @@
-/**
- * Greet a user with a custom message.
- *
- * @param userName The name of the user to be greeted.
- * @returns A greeting message.
- */
-export const greetUser = (userName: string): string => `Hello, ${userName}!`;
+import express, { Express, Request, Response } from "express";
+
+const app: Express = express();
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+app.get("/", (req: Request, res: Response) => {
+  return res.status(200).json({
+    code: 200,
+    status: "success",
+    message: "welcome to betty API",
+  });
+});
+
+app
+  .listen(4000, (): void => {
+    console.log(`server is listening at http://localhost:4000`);
+  })
+  .on("error", (err: Error) => {
+    return console.log("error", err);
+  });

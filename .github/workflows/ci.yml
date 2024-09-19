@@ -58,6 +58,8 @@ jobs:
             cd /var/www/test-ci-cd
             git pull origin main
             node -v
+            nvm use --lts
+            node -v
             npm install
             npm run build
             pm2 restart test-ci-cd:4000

@@ -8,7 +8,8 @@
         "esModuleInterop": true, // Compatibility with CommonJS
         "forceConsistentCasingInFileNames": true, // Ensure consistent file naming
         "skipLibCheck": true, // Skip checking of library declaration files
-        "moduleResolution": "node" // Module resolution strategy
+        "moduleResolution": "node", // Module resolution strategy
+        "baseUrl": "./"
     },
     "include": ["src/**/*"], // Include all TypeScript files in src
     "exclude": ["node_modules", "dist"] // Exclude node_modules and output directories

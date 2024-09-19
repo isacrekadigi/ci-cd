@@ -1,10 +1,12 @@
 // example.js
 // const unusedVar = 10;
 
-function greet(name: string) {
-  if (name == "John") {
-    console.log("Hello, John");
-  }
-}
+/**
+ * Greets a person by name.
+ *
+ * @param {string} name - The name of the person to greet.
+ * @return {void} This function does not return a value.
+ */
+const greetUser = (name: string): string => `Hello, ${name}!`;
 
-export default greet;
+export default greetUser;

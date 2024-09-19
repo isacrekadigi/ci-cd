@@ -9,8 +9,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "format": "prettier --write src/**/*.ts",
-    "test": "jest",
-    "prepare": "husky"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",

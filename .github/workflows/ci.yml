@@ -57,6 +57,9 @@ jobs:
           script: |
             cd /var/www/test-ci-cd
             git pull origin main
+            # Explicitly load NVM
+            export NVM_DIR="$HOME/.nvm"
+            [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
             nvm use --lts
             node -v
             npm install

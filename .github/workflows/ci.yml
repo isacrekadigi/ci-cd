@@ -23,6 +23,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '20.11.1'  # You can specify the Node.js version you use
+          check-latest: true       
 
       # 3. Install dependencies
       - name: Install dependencies
